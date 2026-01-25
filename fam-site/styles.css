@@ -26,18 +26,32 @@
   --h1: clamp(2.4rem, 5.2vw, 4.4rem);
   --h2: clamp(2rem, 3.4vw, 3.2rem);
   --h3: clamp(1.2rem, 2vw, 1.6rem);
+  /* Brand */
+  --fam-black: #000000;
+  --fam-green: #0E2600;
+
+  /* Oranges / Yellows */
+  --fam-orange: #FF8D10;
+  --fam-gold:   #FFF312;
+
+  /* Supporting */
+  --fam-white:  #ffffff;
 }
 
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
+
+
+
+
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   color:var(--text);
   background:
-    radial-gradient(1000px 600px at 15% -10%, rgba(207,231,201,.9) 0%, rgba(207,231,201,0) 60%),
-    radial-gradient(900px 500px at 90% 20%, rgba(247,227,161,.55) 0%, rgba(247,227,161,0) 65%),
-    var(--bg);
+    radial-gradient(900px 500px at 20% 10%, rgba(255,180,90,.55), transparent 60%),
+    radial-gradient(800px 400px at 80% 20%, rgba(255,140,0,.45), transparent 65%),
+    #fff3e0;
 }
 
 img{ max-width:100%; display:block; }
@@ -82,33 +96,63 @@ ul{ margin:0; padding-left: 18px; }
 }
 
 /* Topbar */
+/* Topbar (pill-style) */
 .topbar{
-  position: sticky;
+  position: absolute;   /* oluline: nüüd on pildi peal */
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
-  height: var(--navH);
-  display:flex;
-  align-items:center;
-  background: rgba(207,231,201,.55);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(0,0,0,.06);
+  padding: 14px 0;
+  background: transparent;   
+  border: 0;
+  height: auto;
 }
+
+/* navigatsion” */
 .nav{
   width:min(var(--container), calc(100% - var(--gutter)*2));
   margin:0 auto;
+
+  height: var(--navH);
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:16px;
-}
-.brand-mark{
-  font-weight:900;
-  letter-spacing:.08em;
-  padding:10px 14px;
+  background: linear-gradient(
+    90deg,
+    var(--fam-orange),
+    var(--fam-gold)
+  );
+
+  color: var(--fam-black);
+  border: 1px solid var(--fam-black);
+
+  padding: 0 22px;
   border-radius: 999px;
-  background: rgba(255,255,255,.55);
-  border: 1px solid rgba(0,0,0,.08);
+
+  
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow: 0 10px 40px rgba(0,0,0,.10);
+
+  position: relative; /* vajalik mobiil-menüü ankurdamiseks */
 }
+
+/* logo ümber olev ekstra “pill” eemaldame (et logo oleks clean) */
+.brand-mark img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+.brand-mark {
+  padding: 6px 14px;
+  border-radius: 12px;
+}
+
+
+
 .navlinks{
   display:flex;
   gap:12px;
@@ -146,8 +190,24 @@ ul{ margin:0; padding-left: 18px; }
 
 /* Hero */
 .hero{
-  padding: clamp(28px, 4vw, 56px) 0 36px;
+  position: relative;
+
+  /* lisa siia: ruum menüüribale + natuke õhku */
+  padding-top: calc(var(--navH) + 200px);
+
+  padding-bottom: 400px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.15) 0%,
+      rgba(255,255,255,0.65) 70%,
+      #fff3e0 100%
+    ),
+    url("assets/ülemine_bg.png") center / cover no-repeat;
 }
+
+
 .hero-grid{
   display:grid;
   grid-template-columns: 1.05fr .95fr;
@@ -204,10 +264,7 @@ ul{ margin:0; padding-left: 18px; }
 .hero-media{
   position:relative;
   min-height: 420px;
-  border-radius: var(--radius);
-  background: rgba(255,255,255,.45);
-  border: 1px solid rgba(0,0,0,.06);
-  box-shadow: var(--shadow-soft);
+ 
   overflow:hidden;
   display:grid;
   place-items:center;
