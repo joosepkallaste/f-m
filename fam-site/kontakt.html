@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="et">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="FÄM – värske ja kerge sparkling cocktail. Mitte õlu. Mitte siider." />
+  <title>FÄM | Värske. Kerge. Üllatav.</title>
+
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/url_logo.png">
+  <link rel="apple-touch-icon" href="assets/url_logo.png">
+
+</head>
+
+
+<body>
+  <!-- Age gate (alcohol brand) -->
+  <div class="agegate" id="agegate" role="dialog" aria-modal="true" aria-labelledby="agegate-title">
+    <div class="agecard">
+      <div class="agebadge">FÄM</div>
+      <h2 id="agegate-title">Kas oled vähemalt 18?</h2>
+      <p class="muted">See leht sisaldab alkoholi reklaami. Palun kinnita, et oled täisealine.</p>
+      <div class="ageactions">
+        <button class="btn btn-primary" id="age-yes" type="button">Jah, olen 18+</button>
+        <a class="btn btn-ghost" href="https://www.google.com" rel="noopener">Ei</a>
+      </div>
+      <p class="tiny muted">Tarbi vastutustundlikult.</p>
+    </div>
+  </div>
+
+  <header class="topbar" id="top">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="FÄM avaleht">
+        <span class="brand-mark"><img src="assets/logo2.png" alt="Logo"></span>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Ava menüü" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="navlinks" id="navlinks">
+        <a href="#lugu">Lugu</a>
+        <a href="index.html">Kokteilid</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+
+ <main class="page contact-page">
+  <section class="contact-page-wrap">
+    <div class="container">
+      <div class="contact-min">
+        <h1>Võtke meiega ühendust</h1>
+        <p class="muted">Koostöö, jaotus, üritused või küsimused — kirjuta.</p>
+
+        <form class="contactform" id="contactForm">
+          <label>
+            <span>Nimi</span>
+            <input type="text" name="name" placeholder="Sinu nimi" required />
+          </label>
+
+          <label>
+            <span>E-mail</span>
+            <input type="email" name="email" placeholder="nimi@meil.ee" required />
+          </label>
+
+          <label>
+            <span>Sõnum</span>
+            <textarea name="message" rows="6" placeholder="Kirjuta siia..." required></textarea>
+          </label>
+
+          <button class="btn btn-primary" type="submit">Saada</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+  <div class="footer-bar">
+    <div class="footer-logo">
+      <img src="assets/logo2.png" alt="FÄM logo">
+    </div>
+
+    <div class="footer-social socials">
+      <a class="iconbtn" href="#" aria-label="Instagram">◎</a>
+      <a class="iconbtn" href="#" aria-label="Facebook">f</a>
+      <a class="iconbtn" href="#" aria-label="TikTok">♪</a>
+    </div>
+  </div>
+
+  <p class="tiny muted footer-copy">
+    © <span id="year"></span> FÄM. 18+ Tarbi vastutustundlikult.
+  </p>
+</footer>
+
+
+  <script src="app.js" defer></script>
+</body>
+</html>

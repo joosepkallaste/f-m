@@ -21,7 +21,7 @@
   --container: 1120px;
   --gutter: 20px;
 
-  --navH: 72px;
+  --navH: 110px;
 
   --h1: clamp(2.4rem, 5.2vw, 4.4rem);
   --h2: clamp(2rem, 3.4vw, 3.2rem);
@@ -98,7 +98,7 @@ ul{ margin:0; padding-left: 18px; }
 /* Topbar */
 /* Topbar (pill-style) */
 .topbar{
-  position: absolute;   /* oluline: nüüd on pildi peal */
+  position: absolute;  
   top: 0;
   left: 0;
   right: 0;
@@ -128,8 +128,8 @@ ul{ margin:0; padding-left: 18px; }
   color: var(--fam-black);
   border: 1px solid var(--fam-black);
 
-  padding: 0 22px;
-  border-radius: 999px;
+  padding: 0 28px;
+  border-radius: 0px;
 
   
   backdrop-filter: blur(14px);
@@ -142,7 +142,7 @@ ul{ margin:0; padding-left: 18px; }
 
 /* logo ümber olev ekstra “pill” eemaldame (et logo oleks clean) */
 .brand-mark img {
-  height: 50px;
+  height: 70px;
   width: auto;
   display: block;
 }
@@ -159,8 +159,8 @@ ul{ margin:0; padding-left: 18px; }
   align-items:center;
 }
 .navlinks a{
-  padding:10px 12px;
-  border-radius: 999px;
+  padding: 12px 16px;
+  font-size: 23px;
 }
 .navlinks a:hover{
   background: rgba(255,255,255,.45);
@@ -505,38 +505,92 @@ input, textarea{
 }
 
 /* Footer */
+/* Full-width stripe bar in footer */
+/* Full-width stripe bar in footer */
+/* ===== FOOTER STRIPE ===== */
+
 .footer{
-  padding: 44px 0 54px;
-  background: rgba(255,255,255,.35);
-  border-top: 1px solid rgba(0,0,0,.05);
+  background: #fff3e0;
+  padding-bottom: 28px;
 }
-.footer-top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 16px;
-  margin-bottom: 18px;
+
+.footer-bar{
+  position: relative;
+  width: 100%;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.footer-grid{
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+
+/* black stripe */
+.footer-bar::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 22px;                 /* PEENEM JOON */
+  background: #000;
+  box-shadow:
+    inset 0 2px #f2e400,
+    inset 0 -2px #f2e400;
 }
-.footcol h4{ margin-bottom: 10px; }
-.footcol a{
-  display:block;
-  padding: 6px 0;
-  color: rgba(0,0,0,.72);
+
+/* centered logo */
+.footer-logo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
-.socials{ display:flex; gap: 10px; }
+
+.footer-logo img{
+  height: 68px;
+  display: block;
+}
+
+/* socials vertical */
+.footer-social{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: calc(50% + 42px);
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  z-index: 2;
+}
+.footer .socials{
+  flex-direction: row;
+  justify-content: center;
+}
+.footer-social{
+  top: calc(50% + 46px);
+}
+
+
+
+/* icon buttons */
 .iconbtn{
-  width: 40px; height: 40px;
+  width: 40px;
+  height: 40px;
   border-radius: 999px;
-  display:grid;
-  place-items:center;
-  border: 1px solid rgba(0,0,0,.10);
-  background: rgba(255,255,255,.55);
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(0,0,0,.15);
+  background: rgba(255,255,255,.75);
 }
+
+/* copyright */
+.footer-copy{
+  text-align: center;
+  margin-top: 26px;
+  padding-bottom: 10px;
+}
+
 
 /* Age gate */
 .agegate{
@@ -614,4 +668,48 @@ input, textarea{
   .navlinks.open{ display:flex; }
   .product-card{ grid-column: span 12; }
   .banner{ flex-direction:column; align-items:flex-start; }
+
 }
+/* Kontakt eraldi lehel (minimal) */
+.contact-page {
+  background: #fff;              /* puhas valge */
+}
+
+.contact-page-wrap{
+  padding-top: calc(var(--navH) + 80px);
+  padding-bottom: 90px;
+}
+
+.contact-min{
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-min h1{
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+/* minimalistlik vorm: vähem "card" tunnet */
+.contact-page .contactform{
+  margin-top: 28px;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.contact-page input,
+.contact-page textarea{
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.18);
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* uusim 1.27.2026 

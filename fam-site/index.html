@@ -6,8 +6,11 @@
   <meta name="description" content="FÄM – värske ja kerge sparkling cocktail. Mitte õlu. Mitte siider." />
   <title>FÄM | Värske. Kerge. Üllatav.</title>
 
-  <link rel="icon" type="image/png" href="assets" />
+
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/url_logo.png">
+  <link rel="apple-touch-icon" href="assets/url_logo.png">
+
 </head>
 
 <body>
@@ -36,12 +39,9 @@
       </button>
 
       <div class="navlinks" id="navlinks">
-        <a href="#tooted">Tooted</a>
         <a href="#lugu">Lugu</a>
         <a href="#kokteilid">Kokteilid</a>
-        <a href="#kkk">KKK</a>
-        <a href="#kontakt">Kontakt</a>
-        <a class="pill" href="#pood">e-Pood</a>
+        <a href="kontakt.html">Kontakt</a>
       </div>
     </nav>
   </header>
@@ -51,17 +51,13 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="kicker"><span class="dot"></span> FÄM esitleb</p>
-          <h1>Värske. Kerge. Üllatav.</h1>
+          <h3 class="kicker"><span class="dot"></span> FÄM esitleb</h3>
+          <h2>Värske. Kerge. Üllatav.</h2>
           <p class="lead">
             Sparkling cocktail, mis sobib nii pidudeks kui ka vaikseks õhtuks.
             Mitte õlu. Mitte siider. Lihtsalt FÄM.
           </p>
 
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#tooted">Vaata tooteid</a>
-            <a class="btn btn-ghost" href="#kokteilid">Proovi kokteile</a>
-          </div>
 
           <div class="micro">
             <div class="micro-item">
@@ -84,35 +80,15 @@
       </div> 
       
 
-      <div class="scrollhint">
+      <!-- <div class="scrollhint">
         <a href="#tooted" aria-label="Keri allapoole">
           <span>Keri</span>
           <span class="arrow">↓</span>
         </a>
-      </div>
+      </div> -->
     </section>
 
-    <!-- PRODUCTS -->
-    <section class="section" id="tooted">
-      <div class="container">
-        <div class="section-head">
-          <h2>Originaalsed maitsed</h2>
-          <p class="muted">Vähem juttu. Rohkem maitset. Valmis nautimiseks.</p>
-        </div>
-
-        <div class="products" id="products">
-          <!-- app.js injects cards -->
-        </div>
-
-        <div class="banner reveal">
-          <div>
-            <h3>“Easy to drink. Hard to forget.”</h3>
-            <p class="muted">Just see tunne, kui hetk on õige.</p>
-          </div>
-          <a class="btn btn-ghost" href="#pood">Mine e-poodi</a>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- STORY  <div class="hero-media" aria-hidden="true">
           <div class="glow"></div>
@@ -132,13 +108,16 @@
 
         <div class="split-copy reveal">
           <p class="kicker"><span class="dot"></span> Lugu</p>
-          <h2>Jaga hetke, jaga FÄMi</h2>
+          <h2>FÄM ei sündinud koosolekutel. Ega Excelis.</h2>
           <p class="lead">
-            FÄM sündis soovist luua jook, mis pole liiga keeruline ega liiga magus.
-            Kerge kihisev tekstuur, värske maitse ja puhas disain.
+ FÄM sündis ühel soojal suveõhtul sõprade vahel. Istusime, rääkisime ja mõtlesime, kui hea oleks panna purki see tunne, mis suvel alati kaasas on – kergus, rahu ja need õiged hetked, mis ei vaja seletamist. Et kui võtad lonksu, meenub kohe suvi.
+Me ei tahtnud teha järjekordset keerulist jooki. Ega midagi üle mõeldut.
+ Tahtsime midagi lihtsat, ausat ja mõnusat – jooki, mida võib haarata igas olukorras ja mida ei pea “analüüsima”. Midagi, mida võibki jääda jooma.
+Olgu see rahulik õhtu, sõpradega koosolemine või hetk iseendale – FÄM sobitub.
+ Ta on seltskondlik nagu meie ise: ei suru ennast esiplaanile, aga on alati kohal, kui vaja. Lonksu võttes ei pea mõtlema. Lihtsalt naudid.
           </p>
 
-          <div class="ticks">
+          <!-- <div class="ticks">
             <div class="tick">
               <span class="tick-ico">✓</span>
               <div>
@@ -160,12 +139,7 @@
                 <p class="muted">peol, rannas, saunas, kodus</p>
               </div>
             </div>
-          </div>
-
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#kontakt">Küsi koostööd</a>
-            <a class="btn btn-ghost" href="#kkk">Loe KKK</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -215,155 +189,31 @@
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section alt" id="kkk">
-      <div class="container">
-        <div class="section-head">
-          <h2>KKK</h2>
-          <p class="muted">Kiired vastused. Kui ei leia, kirjuta meile.</p>
-        </div>
 
-        <div class="faq">
-          <details class="faqitem reveal">
-            <summary>Kas FÄM on õlu või siider?</summary>
-            <p class="muted">Ei. FÄM on sparkling cocktail – värske ja kerge alternatiiv.</p>
-          </details>
-
-          <details class="faqitem reveal">
-            <summary>Mis on alkoholisisaldus?</summary>
-            <p class="muted">Tüüpiliselt 5.5% vol (täpne info on purgil).</p>
-          </details>
-
-          <details class="faqitem reveal">
-            <summary>Kuidas on parim serveerida?</summary>
-            <p class="muted">Jääkülmalt. Jääga klaasis või kokteilina.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- SHOP -->
-    <section class="section" id="pood">
-      <div class="container">
-        <div class="section-head">
-          <h2>e-Pood</h2>
-          <p class="muted">Placeholder sektsioon – siia saad lisada päris e-poe hiljem.</p>
-        </div>
-
-        <div class="shopcard reveal">
-          <div class="shopcopy">
-            <h3>Valmis tellima?</h3>
-            <p class="muted">Lisa siia päris tootelehed ja tarneinfo (Shopify / Woo / Stripe).</p>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="#tooted">Vaata tooteid</a>
-              <a class="btn btn-ghost" href="#kontakt">Küsi pakkumist</a>
-            </div>
-          </div>
-          <div class="shopmedia" aria-hidden="true">
-            <img class="rounded" src="assets/fam-can-orange.png" alt="" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section alt" id="kontakt">
-      <div class="container">
-        <div class="section-head">
-          <h2>Kontakt</h2>
-          <p class="muted">Koostöö, jaotus, üritused või küsimused — kirjuta.</p>
-        </div>
-
-        <div class="contactgrid">
-          <form class="contactform reveal" id="contactForm">
-            <label>
-              <span>Nimi</span>
-              <input type="text" name="name" placeholder="Sinu nimi" required />
-            </label>
-
-            <label>
-              <span>E-mail</span>
-              <input type="email" name="email" placeholder="nimi@meil.ee" required />
-            </label>
-
-            <label>
-              <span>Sõnum</span>
-              <textarea name="message" rows="5" placeholder="Kirjuta siia..." required></textarea>
-            </label>
-
-            <button class="btn btn-primary" type="submit">Saada</button>
-            <p class="tiny muted">Tarbi vastutustundlikult. 18+.</p>
-          </form>
-
-          <div class="contactcard reveal">
-            <h3>FÄM</h3>
-            <p class="muted">Värske ja kerge sparkling cocktail. Mitte õlu. Mitte siider.</p>
-
-            <div class="contactmeta">
-              <div>
-                <strong>E-mail</strong>
-                <p class="muted">hello@fam.ee</p>
-              </div>
-              <div>
-                <strong>Koostöö</strong>
-                <p class="muted">partners@fam.ee</p>
-              </div>
-            </div>
-
-            <div class="minibanner">
-              <p><strong>Tip:</strong> Hoia alati külmas.</p>
-              <p class="muted">Parim jääkülmalt — eriti suvel.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+    
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-top">
-        <a class="brand" href="#top" aria-label="FÄM">
-          <span class="brand-mark">FÄM</span>
-        </a>
+  <div class="footer-bar">
 
-        <div class="socials" aria-label="Sotsiaalmeedia">
-          <a class="iconbtn" href="#" aria-label="Instagram" title="Instagram">◎</a>
-          <a class="iconbtn" href="#" aria-label="Facebook" title="Facebook">f</a>
-          <a class="iconbtn" href="#" aria-label="TikTok" title="TikTok">♪</a>
-        </div>
-      </div>
-
-      <div class="footer-grid">
-        <div class="footcol">
-          <h4>Explore</h4>
-          <a href="#top">Home</a>
-          <a href="#tooted">Products</a>
-          <a href="#kokteilid">Cocktails</a>
-        </div>
-        <div class="footcol">
-          <h4>Support</h4>
-          <a href="#kkk">FAQ</a>
-          <a href="#kontakt">Contact</a>
-        </div>
-        <div class="footcol">
-          <h4>Others</h4>
-          <a href="#lugu">Story</a>
-          <a href="#pood">e-Shop</a>
-        </div>
-        <div class="footcol">
-          <h4>Utility</h4>
-          <a href="#top">Back to top</a>
-          <a href="#kkk">Terms (placeholder)</a>
-        </div>
-      </div>
-
-      <p class="tiny muted" style="margin-top:18px;">
-        © <span id="year"></span> FÄM. 18+ Tarbi vastutustundlikult.
-      </p>
+    <div class="footer-logo">
+      <img src="assets/logo2.png" alt="FÄM logo">
     </div>
-  </footer>
+
+    <div class="footer-social socials">
+      <a class="iconbtn" href="#" aria-label="Instagram">◎</a>
+      <a class="iconbtn" href="#" aria-label="Facebook">f</a>
+      <a class="iconbtn" href="#" aria-label="TikTok">♪</a>
+    </div>
+
+  </div>
+
+  <p class="tiny muted footer-copy">
+  © <span id="year"></span> FÄM. 18+ Tarbi vastutustundlikult.
+  </p>
+
+</footer>
+
 
   <script src="app.js" defer></script>
 </body>
