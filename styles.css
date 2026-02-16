@@ -712,4 +712,126 @@ input, textarea{
   padding-right: 0;
 }
 
+/* =========================
+   TEAM (Meet the team)
+   ========================= */
+
+.team{
+  position: relative;
+}
+
+.team-head{
+  text-align: center;
+  display: grid;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.team-head h2{
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  letter-spacing: -0.03em;
+}
+
+.team-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.team-card{
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(255,255,255,.75);
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: var(--shadow-soft);
+  transform: translateY(0);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.team-card:hover{
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.team-photo{
+  position: relative;
+  height: 320px;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(1200px 400px at 50% 10%, rgba(255,255,255,.55), transparent 60%),
+    linear-gradient(135deg, rgba(255,141,16,.35), rgba(255,243,18,.25));
+}
+
+/* kolm veidi erinevat “placeholder” tausta */
+.team-photo--a{
+  background:
+    radial-gradient(900px 360px at 20% 15%, rgba(255,141,16,.55), transparent 60%),
+    linear-gradient(135deg, rgba(0,0,0,.06), rgba(255,243,18,.22));
+}
+.team-photo--b{
+  background:
+    radial-gradient(900px 360px at 80% 20%, rgba(255,243,18,.55), transparent 60%),
+    linear-gradient(135deg, rgba(255,141,16,.20), rgba(0,0,0,.06));
+}
+.team-photo--c{
+  background:
+    radial-gradient(900px 360px at 50% 10%, rgba(255,141,16,.40), transparent 60%),
+    linear-gradient(135deg, rgba(255,243,18,.18), rgba(0,0,0,.06));
+}
+
+.team-initials{
+  width: 108px;
+  height: 108px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  letter-spacing: .06em;
+  font-size: 1.6rem;
+  color: rgba(0,0,0,.86);
+  background: rgba(255,255,255,.70);
+  border: 1px solid rgba(0,0,0,.10);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 60px rgba(0,0,0,.10);
+}
+
+.team-fade{
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 58%;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 100%);
+  opacity: .55;
+}
+
+.team-meta{
+  padding: 16px 16px 18px;
+  display: grid;
+  gap: 4px;
+}
+
+.team-meta h3{
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 980px){
+  .team-grid{
+    grid-template-columns: 1fr;
+  }
+  .team-photo{
+    height: 300px;
+  }
+}
+
+/*.team-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+} 
+
+
 /* uusim 1.27.2026 
