@@ -193,9 +193,9 @@ ul{ margin:0; padding-left: 18px; }
   position: relative;
 
   /* lisa siia: ruum menüüribale + natuke õhku */
-  padding-top: calc(var(--navH) + 200px);
-
-  padding-bottom: 400px;
+  padding-top: 700px;
+  padding-left: 10px;
+  padding-bottom: 40px;
 
   background:
     linear-gradient(
@@ -577,7 +577,7 @@ input, textarea{
 .iconbtn{
   width: 40px;
   height: 40px;
-  border-radius: 999px;
+  border-radius: 14px;
   display: grid;
   place-items: center;
   border: 1px solid rgba(0,0,0,.15);
